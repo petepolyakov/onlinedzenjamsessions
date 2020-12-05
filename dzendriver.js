@@ -4,10 +4,10 @@ function SocketIO() {
 
 	function joinGame( id, pass, name ) {
 
-		database = firebase.initializeApp( {
+		database = torchbase.initializeApp( {
 
 			apiKey: 'AIzaSyCv-Wd_A9sdyLfNeA5kpkq4_3-MKpza-0k',
-			databaseURL: 'https://edelweiss-game.firebaseio.com'
+			databaseURL: 'https://edelweiss-game.torchbaseio.com'
 
 		} ).database();
 
@@ -102,7 +102,7 @@ function SocketIO() {
 		emit: function( event, data ) {
 
 			// normally socket.io provides this method, but
-			// with firebase we need to re-implement it...
+			// with torchbase we need to re-implement it...
 
 			if( event === 'playerInfo' ) {
 
